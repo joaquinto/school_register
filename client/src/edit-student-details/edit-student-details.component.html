@@ -1,0 +1,55 @@
+<div class="d-flex flex-row flex-md-row flex-sm-row">
+  <span class="title">
+    <strong>Edit Student Details</strong>
+  </span>
+
+  <button class="btn btn-lg btn-info bckl" (click)="letgoBack()">Back</button>
+</div>
+<div *ngIf="student">
+  <form [formGroup]="myForm"  (submit)="editStudent()">
+
+    <div class="form-group input">
+      <div class="input-group">
+        <img [src]="logom" alt="" id="image" style="cursor:pointer;"/>
+      </div>
+    </div>
+
+    <div class="form-group input first">
+      <label>Firstname</label>
+      <input id="input" class="form-control" type="text" name="firstname" [ngModel]="student.firstname" formControlName="firstname" />
+    </div>
+
+    <div class="form-group input">
+      <label>Lastname</label>
+      <input class="form-control" type="text" name="lastname" [ngModel]="student.lastname" formControlName="lastname" />
+    </div>
+
+    <div class="form-group input">
+      <label>Age</label>
+      <input class="form-control" type="Number" name="age" [ngModel]="student.age" formControlName="age" />
+    </div>
+
+    <div class="form-group input">
+      <label>Gender</label>
+      <select class="form-control" formControlName="gender" [ngModel]="student.gender"  placeholder="Gender" >
+        <option>Male</option>
+        <option>Female</option>
+      </select>
+    </div>
+
+    <div class="form-group input">
+      <label>Class</label>
+      <select class="form-control" formControlName="studentClass" [ngModel]="student.studentClass" placeholder="class" >
+        <option>JSS 1</option>
+        <option>JSS 2</option>
+        <option>JSS 3</option>
+        <option>SSS 1</option>
+        <option>SSS 2</option>
+        <option>SSS 3</option>
+      </select>
+    </div>
+
+    <input type="submit" class="btn btn-primary"  value="Update Student Info" />
+
+  </form>
+</div>

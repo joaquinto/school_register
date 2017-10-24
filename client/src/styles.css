@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Nova+Flat');
+body{
+  background-image: url("./assets/backgroung/beautiful_scenery_04_hd_images.jpg");
+  margin: 0px;
+  width: 100%;
+  padding: 0px;
+}
+.navbar{
+  background-color: rgba(36, 37, 130, .8);
+  font-family: 'Nova Flat', cursive;
+  font-size: 44px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  margin-bottom: 7px;
+}
+.footer{
+  position: fixed;
+  /*margin-left: -15px;*/
+  bottom: 0;
+  background-color: rgba(36, 37, 130, .8);
+  width: 100%;
+  height: 40px;
+  padding-left: 30px;
+}
+.hold{
+  vertical-align: middle;
+  margin-top: 9px;
+  color: #fff;
+}

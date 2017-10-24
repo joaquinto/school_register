@@ -1,0 +1,46 @@
+<span class="title">
+  <strong>Student Details</strong>
+</span>
+<br>
+<br>
+<div *ngIf="student">
+  <span class="image">
+    <img src="../assets/images/{{student.student_pix}}" alt="student picture"/>
+  </span>
+
+  <span>
+    <strong>
+      Firstname: {{student.firstname}}
+    </strong>
+  </span>
+  <br>
+  <span>
+    <strong>
+      Lastname: {{student.lastname}}
+    </strong>
+  </span>
+  <br>
+  <span>
+    <strong>
+      Age: {{student.age}}
+    </strong>
+  </span>
+  <br>
+  <span>
+    <strong>
+      Gender: {{student.gender}}
+    </strong>
+  </span>
+  <br>
+  <span>
+    <strong>
+      Class: {{student.studentClass}}
+    </strong>
+  </span>
+</div>
+
+<div class="action">
+  <button class="btn btn-lg btn-primary" (click)="goBack()">Back</button>
+  <button class="btn btn-lg btn-info" routerLink="/edit-student-details">Edit</button>
+  <button class="btn btn-lg btn-danger" (click)="deleteStudent()">Delete</button>
+</div>

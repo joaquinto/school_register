@@ -1,0 +1,13 @@
+<span class="title">
+  <strong>List of Students</strong>
+</span>
+<br>
+<br>
+<div class="list-group" *ngFor="let student of students">
+  <a class="list-group-item list-group-item-action d-flex flex-row" (click)="onSelect(student)" routerLink="/student-details">
+    <img src="../assets/images/{{student.student_pix}}" alt="..." class="rounded-circle">
+    <span class="cont">
+      <strong>{{student.firstname}} {{student.lastname}}</strong>
+    </span>
+  </a>
+</div>

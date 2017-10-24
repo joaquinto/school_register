@@ -1,0 +1,64 @@
+<div class="container">
+  <div class="d-flex flex-row flex-md-row flex-sm-row">
+    <span class="title">
+      <strong>Student Registration</strong>
+    </span>
+  </div>
+
+  <form [formGroup]="myForm"  (submit)="registerStudent()">
+    <div class="form-group input">
+      <div class="input-group">
+        <input type="file" id="imh" (change)="fileChange($event)" />
+        <img [src]="logo" alt="" id="img" style="cursor:pointer;"/>
+        <label id="jji">
+          <span id="ilj">
+            <fa name="user" size="2x"></fa>
+          </span>
+          <span id="ikj" style="font-size: 17px;">
+            Select a picture to upload
+          </span>
+        </label>
+      </div>
+    </div>
+
+    <div class="form-group input first">
+      <label>Firstname</label>
+      <input id="input" class="form-control" type="text" name="firstname" formControlName="firstname" />
+    </div>
+
+    <div class="form-group input">
+      <label>Lastname</label>
+      <input class="form-control" type="text" name="lastname" formControlName="lastname" />
+    </div>
+
+    <div class="form-group input">
+      <label>Age</label>
+      <input class="form-control" type="Number" name="age" formControlName="age" />
+    </div>
+
+    <div class="form-group input">
+      <label>Gender</label>
+      <select class="form-control" formControlName="gender" placeholder="Gender" >
+        <option>Male</option>
+        <option>Female</option>
+      </select>
+    </div>
+
+    <div class="form-group input">
+      <label>Class</label>
+      <select class="form-control" formControlName="studentClass" placeholder="class" >
+        <option>JSS 1</option>
+        <option>JSS 2</option>
+        <option>JSS 3</option>
+        <option>SSS 1</option>
+        <option>SSS 2</option>
+        <option>SSS 3</option>
+      </select>
+    </div>
+
+    <input type="submit" class="btn btn-primary"  value="Register Student" />
+
+  </form>
+</div>
+
+
